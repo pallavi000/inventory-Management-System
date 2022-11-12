@@ -13,7 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        $table->string("item_id");
+        Schema::table('users', function (Blueprint $table) {
+            $table->integer('is_admin')->default(0);
+        });
     }
 
     /**
@@ -23,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 };

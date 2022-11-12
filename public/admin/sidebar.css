@@ -629,3 +629,28 @@ select.list-dt:focus {
     right: 1px;
     width: 20px
 }
+.bg-gradient-primary {
+  background: linear-gradient(87deg, #590696 0, #825ee4 100%) !important;
+}
+
+.bg-gradient-primary .icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.bg-gradient-primary .icon i {
+  font-size: 2.25rem;
+}
+
+.bg-gradient-primary .icon-shape {
+  display: inline-flex;
+  padding: 12px;
+  text-align: center;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-gradient-primary .icon-shape i {
+  font-size: 1.25rem;
+}

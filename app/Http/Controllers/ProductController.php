@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\ProductImport;
 use Rap2hpoutre\FastExcel\FastExcel;
+use Illuminate\Support\Str;
 
 
 class ProductController extends Controller
@@ -53,6 +54,7 @@ class ProductController extends Controller
             'status'=>$request->status,
             'description'=>$request->description,
             'uom'=>$request->uom,
+            'item_id'=>Str::random(8),
         ]);
         if($product){
             return redirect()->back()->with(['success' => 'Product created successfully!!']);

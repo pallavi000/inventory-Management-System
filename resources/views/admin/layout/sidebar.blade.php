@@ -73,21 +73,26 @@
               
                 </ul>
             </li>
-
-            
-            
-           
-           
+            <li>
+                <a href="{{route('user.index')}}">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">User</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="{{route('user.index')}}">User</a></li>
+                </ul>
+            </li>
             <li>
                 <div class="profile-details">
                     <div class="profile-content">
                         <!--<img src="image/profile.jpg" alt="profileImg">-->
                     </div>
                     <div class="name-job">
-                        <div class="profile_name"> {{ Auth::user()->name }}</div>
+                        <a class="profile_name" href="{{route('user.edit',Auth::user()->id)}}"> {{ Auth::user()->name }}</a>
                     </div>
+
                     <a href="{{ route('logout') }}" onclick="event.preventDefault();
-            document.getElementById('logout-form').submit();">
+                document.getElementById('logout-form').submit();">
                         <i class='bx bx-log-out'></i>
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
